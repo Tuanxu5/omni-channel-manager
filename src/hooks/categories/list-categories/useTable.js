@@ -1,4 +1,4 @@
-import { Avatar, Space, Typography } from "antd";
+import { Space, Typography } from "antd";
 import { SvgIcon } from "../../../assets/icons";
 
 export const useTable = () => {
@@ -6,8 +6,8 @@ export const useTable = () => {
     {
       key: "1",
       id: "1",
-      thumb: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
-      title: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh",
+      name: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh",
+      subcategories_count: 3,
     },
   ];
 
@@ -21,18 +21,19 @@ export const useTable = () => {
       },
     },
     {
-      title: <Typography.Text>Thumb</Typography.Text>,
-      key: "thumb",
-      align: "center",
+      title: <Typography.Text>Name</Typography.Text>,
+      key: "name",
+      align: "left",
       render: (_, record) => {
-        return <Avatar src={record?.thumb} />;
+        return <Typography.Text>{record?.name}</Typography.Text>;
       },
     },
     {
-      title: <Typography.Text>Title</Typography.Text>,
-      key: "thumb",
+      title: <Typography.Text>Subcategories count</Typography.Text>,
+      key: "subcategories_count",
+      align: "center",
       render: (_, record) => {
-        return <Typography.Text>{record?.title}</Typography.Text>;
+        return <Typography.Text>{record?.subcategories_count}</Typography.Text>;
       },
     },
     {
