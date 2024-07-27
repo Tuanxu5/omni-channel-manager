@@ -1,3 +1,5 @@
+import { ListProductSection } from "../sections/products/list-product/ListProductSection";
+
 export const ProductsPages = () => {
-  return <>ProductPage</>;
+  return <ListProductSection />;
 };
