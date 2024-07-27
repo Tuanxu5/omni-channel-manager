@@ -4,7 +4,7 @@ import { CustomInput } from "../../../components/custom-input/CustomInput";
 import { CustomListPage } from "../../../components/custom-list-page/CustomListPage";
 import { CustomPagination } from "../../../components/custom-pagination/CustomPagination";
 import { CustomSelect } from "../../../components/custom-select/CustomSelect";
-import { useTable } from "../../../hooks/categories/list-categories/useTable";
+import { useTable } from "../../../hooks/categories/list-category/useTable";
 
 export const ListCategorySection = () => {
   const { data, columns } = useTable();
