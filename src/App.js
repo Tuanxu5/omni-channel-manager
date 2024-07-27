@@ -4,7 +4,10 @@ import React, { useState } from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import "./App.scss";
 import { NavBar } from "./layouts/navbar/navbar";
+import { CategoriesPages } from "./pages/CategoriesPage";
+import { DescriptionsPages } from "./pages/DescripstionsPage";
 import ErrorPage from "./pages/ErrorPage";
+import { ProductsPages } from "./pages/ProductsPage";
 
 const { Content, Footer, Sider } = Layout;
 function getItem(label, key, icon, children) {
@@ -27,17 +30,18 @@ const items = [
 const router = [
   {
     path: "/",
-    element: <div>products</div>,
+    element: <ProductsPages />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/descriptions",
-    element: <div>descriptions</div>,
+    element: <DescriptionsPages />,
     errorElement: <ErrorPage />,
   },
   {
     path: "/categories",
-    element: <div>categories</div>,
+    element: <CategoriesPages />,
+    errorElement: <ErrorPage />,
   },
 ];
 
