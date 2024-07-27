@@ -1,5 +1,5 @@
-import { SpotifyOutlined, TikTokOutlined } from "@ant-design/icons";
 import { Avatar, Space, Typography } from "antd";
+import { SvgIcon } from "../../../assets/icons";
 
 export const useTable = () => {
   const data = [
@@ -38,14 +38,11 @@ export const useTable = () => {
     },
     {
       key: "action",
+      align: "center",
       render: (_, record) => (
         <Space size="middle">
-          <a>
-            <TikTokOutlined />
-          </a>
-          <a>
-            <SpotifyOutlined />
-          </a>
+          <SvgIcon.IconEdit />
+          <SvgIcon.IconDelete />
         </Space>
       ),
     },

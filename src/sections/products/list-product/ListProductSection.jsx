@@ -1,6 +1,6 @@
-import { StepForwardOutlined } from "@ant-design/icons";
 import { Col, Input, Row, Table, Tag } from "antd";
 import { useState } from "react";
+import { SvgIcon } from "../../../assets/icons";
 import { CustomButton } from "../../../components/custom-button/CustomButton";
 import { CustomDatePicker } from "../../../components/custom-date-picker/CustomDatePicker";
 import { CustomInput } from "../../../components/custom-input/CustomInput";
@@ -32,7 +32,7 @@ export const ListProductSection = () => {
         <div className="flex-column">
           <Row gutter={[0, 16]} style={{ display: "flex", justifyContent: "space-between" }}>
             <CustomModal
-              component={<CustomButton type="primary" title="Sync Product" icon={<StepForwardOutlined />} />}
+              component={<CustomButton type="primary" title="Sync Product" icon={<SvgIcon.IconImportFile />} />}
               title={"Bulk Edit Product"}
               width={550}
               content={
