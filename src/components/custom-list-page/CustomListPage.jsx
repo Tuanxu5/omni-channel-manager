@@ -9,8 +9,8 @@ export const CustomListPage = ({ title, headerCard, contentCard }) => {
         <CustomTitle title={title}></CustomTitle>
       </Row>
       <div className="content-page">
-        <div>{headerCard}</div>
-        <div>{contentCard}</div>
+        <div className="header-card">{headerCard}</div>
+        <div className="content-card">{contentCard}</div>
       </div>
     </Col>
   );

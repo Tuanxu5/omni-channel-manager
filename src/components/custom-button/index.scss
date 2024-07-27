@@ -3,7 +3,7 @@
     height: 40px;
     color: #fff;
     border-radius: 10px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   .ant-btn-primary {
@@ -14,11 +14,23 @@
     }
   }
 
-  .ant-btn-default {
+  .ant-btn-secondary {
     background-color: #3b3f5c;
     &:hover {
       background-color: #3b3f5c !important;
       color: #fff !important;
+    }
+  }
+
+  .ant-btn-cancel {
+    background-color: #fff;
+    border: 1px solid #e7515a;
+    color: #e7515a;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #e7515a;
+      color: #e7515a;
     }
   }
 }

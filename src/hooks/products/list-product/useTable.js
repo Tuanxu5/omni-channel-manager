@@ -1,12 +1,12 @@
 import { SpotifyOutlined, TikTokOutlined } from "@ant-design/icons";
-import { Space } from "antd";
+import { Avatar, Space, Typography } from "antd";
 
 export const useTable = () => {
   const data = [
     {
       key: "1",
       id: "1",
-      thumb: "thumb",
+      thumb: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
       title: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh",
       tags: ["nice", "developer"],
     },
@@ -14,23 +14,29 @@ export const useTable = () => {
 
   const columns = [
     {
-      title: "id",
-      dataIndex: "id",
+      title: <Typography.Text>ID</Typography.Text>,
       key: "id",
-      render: text => <a>{text}</a>,
+      align: "center",
+      render: (_, record) => {
+        return <Typography.Text>{record?.id}</Typography.Text>;
+      },
     },
     {
-      title: "thumb",
-      dataIndex: "thumb",
+      title: <Typography.Text>Thumb</Typography.Text>,
       key: "thumb",
+      align: "center",
+      render: (_, record) => {
+        return <Avatar src={record?.thumb} />;
+      },
     },
     {
-      title: "title",
-      dataIndex: "title",
-      key: "title",
+      title: <Typography.Text>Title</Typography.Text>,
+      key: "thumb",
+      render: (_, record) => {
+        return <Typography.Text>{record?.title}</Typography.Text>;
+      },
     },
     {
-      title: "Action",
       key: "action",
       render: (_, record) => (
         <Space size="middle">

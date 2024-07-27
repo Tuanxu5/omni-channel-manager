@@ -1,0 +1,23 @@
+.custom-modal {
+  .ant-modal-content {
+    padding: 0;
+
+    .ant-modal-header {
+      background-color: #fbfbfb;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+    }
+    .ant-modal-body {
+      padding: 0 24px;
+    }
+
+    .ant-modal-footer {
+      display: flex;
+      justify-content: end;
+      gap: 8px;
+      padding: 0 24px 20px 24px;
+    }
+  }
+}
