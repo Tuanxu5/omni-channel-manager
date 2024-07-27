@@ -1,6 +1,5 @@
 .custom-button {
   .ant-btn {
-    height: 40px;
     color: #fff;
     border-radius: 10px;
     font-weight: 600;
@@ -28,9 +27,20 @@
     color: #e7515a;
 
     &:hover {
-      background-color: #fff;
+      background-color: #e7515a;
       border: 1px solid #e7515a;
-      color: #e7515a;
+      color: #fff;
+    }
+  }
+
+  .ant-btn-default {
+    background-color: #fff;
+    border: 1px solid #4361ee;
+    color: #4361ee;
+    &:hover {
+      background-color: #4361ee !important;
+      border: 1px solid #4361ee;
+      color: #fff !important;
     }
   }
 }

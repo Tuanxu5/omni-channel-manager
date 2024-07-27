@@ -39,7 +39,7 @@ export const CustomPagination = ({ total }) => {
           ]}
           defaultValue={10}
           onChange={value => handleChange(currentPage, value)}
-          width={32}
+          height={32}
         />
       </div>
       <Pagination

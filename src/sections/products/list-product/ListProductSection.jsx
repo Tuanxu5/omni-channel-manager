@@ -2,10 +2,12 @@ import { StepForwardOutlined } from "@ant-design/icons";
 import { Col, Input, Row, Table, Tag } from "antd";
 import { useState } from "react";
 import { CustomButton } from "../../../components/custom-button/CustomButton";
+import { CustomDatePicker } from "../../../components/custom-date-picker/CustomDatePicker";
 import { CustomInput } from "../../../components/custom-input/CustomInput";
 import { CustomListPage } from "../../../components/custom-list-page/CustomListPage";
 import CustomModal from "../../../components/custom-modal/CustomModal";
 import { CustomPagination } from "../../../components/custom-pagination/CustomPagination";
+import { CustomPopover } from "../../../components/custom-popover/CustomPopover";
 import { CustomSelect } from "../../../components/custom-select/CustomSelect";
 import { useTable } from "../../../hooks/products/list-product/useTable";
 
@@ -89,7 +91,52 @@ export const ListProductSection = () => {
                   ]}
                   defaultValue="descending"
                 />
-                <CustomButton title="Delete" type="cancel" />
+                <CustomPopover
+                  title={
+                    <div className="flex-center-between">
+                      <div>Filter</div>
+                      <CustomButton title="Save" type="primary" height={32} />
+                    </div>
+                  }
+                  content={
+                    <Col span={24} style={{ width: "400px", display: "flex", flexDirection: "column", gap: "16px" }}>
+                      <Col span={24}>
+                        <Row>
+                          <span>Categories</span>
+                        </Row>
+                        <Row>
+                          <CustomSelect width={"100%"} />
+                        </Row>
+                      </Col>
+                      <Col span={24}>
+                        <Row>
+                          <span>Creation Date</span>
+                        </Row>
+                        <Row>
+                          <div className="flex-center-between" style={{ gap: "20px" }}>
+                            <div className="flex-center-between" style={{ gap: "8px" }}>
+                              <span style={{ fontSize: "12px" }}>From</span>
+                              <CustomDatePicker />
+                            </div>
+                            <div className="flex-center-between" style={{ gap: "8px" }}>
+                              <span style={{ fontSize: "12px" }}>To</span>
+                              <CustomDatePicker />
+                            </div>
+                          </div>
+                        </Row>
+                      </Col>
+                      <Col span={24}>
+                        <Row>
+                          <span>Owner</span>
+                        </Row>
+                        <Row>
+                          <CustomInput placeholder="Tùng Trần" />
+                        </Row>
+                      </Col>
+                    </Col>
+                  }
+                  component={<CustomButton title="Filter" type="default" />}
+                />
               </Col>
             </Row>
           </Col>
