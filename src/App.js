@@ -4,7 +4,8 @@ import { useState } from "react";
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.scss";
 import { NavBar } from "./layouts/navbar/navbar";
-import { CategoriesPages } from "./pages/CategoriesPage";
+import { CategoriesPages } from "./pages/Categories/CategoriesPage";
+import { CategoryDetailPage } from "./pages/Categories/CategoryDetail";
 import { DescriptionsPage } from "./pages/DescriptionsPage";
 import ErrorPage from "./pages/ErrorPage";
 import { LoginPage } from "./pages/LoginPage";
@@ -34,15 +35,16 @@ const MainLayout = () => {
   const location = useLocation();
 
   const getDefaultSelectedKey = pathname => {
-    switch (pathname) {
-      case "/":
-        return "2";
-      case "/descriptions":
-        return "3";
-      case "/categories":
-        return "4";
-      default:
-        return "2";
+    if (pathname === "/") {
+      return "2";
+    } else if (pathname === "/descriptions") {
+      return "3";
+    } else if (pathname === "/categories") {
+      return "4";
+    } else if (/^\/categories\/[^\/]+$/.test(pathname)) {
+      return "4";
+    } else {
+      return "2";
     }
   };
 
@@ -66,6 +68,7 @@ const MainLayout = () => {
             <Route path="/" element={<ProductsPages />} />
             <Route path="/descriptions" element={<DescriptionsPage />} />
             <Route path="/categories" element={<CategoriesPages />} />
+            <Route path="/categories/:id" element={<CategoryDetailPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Content>

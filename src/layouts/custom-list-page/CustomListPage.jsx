@@ -1,5 +1,5 @@
 import { Col, Row } from "antd";
-import { CustomTitle } from "../custom-title/CustomTitle";
+import { CustomTitle } from "../../components/custom-title/CustomTitle";
 import "./index.scss";
 
 export const CustomListPage = ({ title, headerCard, contentCard }) => {

@@ -4,12 +4,12 @@ import { SvgIcon } from "../../../assets/icons";
 import { CustomButton } from "../../../components/custom-button/CustomButton";
 import { CustomDatePicker } from "../../../components/custom-date-picker/CustomDatePicker";
 import { CustomInput } from "../../../components/custom-input/CustomInput";
-import { CustomListPage } from "../../../components/custom-list-page/CustomListPage";
 import CustomModal from "../../../components/custom-modal/CustomModal";
 import { CustomPagination } from "../../../components/custom-pagination/CustomPagination";
 import { CustomPopover } from "../../../components/custom-popover/CustomPopover";
 import { CustomSelect } from "../../../components/custom-select/CustomSelect";
 import { useTable } from "../../../hooks/products/list-product/useTable";
+import { CustomListPage } from "../../../layouts/custom-list-page/CustomListPage";
 
 export const ListProductSection = () => {
   const { data, columns } = useTable();

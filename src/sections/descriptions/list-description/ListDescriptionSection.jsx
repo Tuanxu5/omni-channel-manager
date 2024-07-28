@@ -3,11 +3,11 @@ import { useState } from "react";
 import { CustomButton } from "../../../components/custom-button/CustomButton";
 import { CustomDatePicker } from "../../../components/custom-date-picker/CustomDatePicker";
 import { CustomInput } from "../../../components/custom-input/CustomInput";
-import { CustomListPage } from "../../../components/custom-list-page/CustomListPage";
 import { CustomPagination } from "../../../components/custom-pagination/CustomPagination";
 import { CustomPopover } from "../../../components/custom-popover/CustomPopover";
 import { CustomSelect } from "../../../components/custom-select/CustomSelect";
 import { useTable } from "../../../hooks/descriptions/list-description/useTable";
+import { CustomListPage } from "../../../layouts/custom-list-page/CustomListPage";
 
 export const ListDescriptionSection = () => {
   const { data, columns } = useTable();
