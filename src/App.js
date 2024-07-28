@@ -10,6 +10,7 @@ import { LoginPage } from "./pages/LoginPage";
 import { ProductsPages } from "./pages/ProductsPage";
 import { CategoriesPages } from "./pages/categories/CategoriesPage";
 import { CategoryDetailPage } from "./pages/categories/CategoryDetail";
+import { DetailSalesChannelPage } from "./pages/sales-channel/DetailSalesChannel";
 import { ListSalesChannelPage } from "./pages/sales-channel/ListSalesChannel";
 
 const { Content, Sider } = Layout;
@@ -47,6 +48,8 @@ const MainLayout = () => {
       return "4";
     } else if (pathname === "/sales-channel") {
       return "5";
+    } else if (/^\/sales-channel\/[^\/]+$/.test(pathname)) {
+      return "5";
     } else {
       return "1";
     }
@@ -74,6 +77,7 @@ const MainLayout = () => {
             <Route path="/categories" element={<CategoriesPages />} />
             <Route path="/categories/:id" element={<CategoryDetailPage />} />
             <Route path="/sales-channel" element={<ListSalesChannelPage />} />
+            <Route path="/sales-channel/:id" element={<DetailSalesChannelPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Content>

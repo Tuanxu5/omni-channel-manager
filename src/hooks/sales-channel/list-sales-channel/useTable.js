@@ -1,4 +1,5 @@
 import { Avatar, Space, Typography } from "antd";
+import { Link } from "react-router-dom";
 import { SvgIcon } from "../../../assets/icons";
 
 export const useTable = () => {
@@ -49,7 +50,9 @@ export const useTable = () => {
       align: "center",
       render: (_, record) => (
         <Space size="middle">
-          <SvgIcon.IconEdit />
+          <Link to={`/sales-channel/${record?.id}`}>
+            <SvgIcon.IconEdit />
+          </Link>
           <SvgIcon.IconDelete />
         </Space>
       ),

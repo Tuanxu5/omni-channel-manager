@@ -48,7 +48,7 @@ export const ListCategorySection = () => {
       contentCard={
         <>
           <Table columns={columns} dataSource={data} pagination={false} rowSelection={rowSelection} size="large" />
-          <CustomPagination total={13} />
+          <CustomPagination total={data?.length} />
         </>
       }
     />

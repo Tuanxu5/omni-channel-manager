@@ -4,6 +4,8 @@ import { CustomInput } from "../../../components/custom-input/CustomInput";
 import { CustomPagination } from "../../../components/custom-pagination/CustomPagination";
 import { CustomSelect } from "../../../components/custom-select/CustomSelect";
 
+import { SvgIcon } from "../../../assets/icons";
+import { CustomButton } from "../../../components/custom-button/CustomButton";
 import { useTable } from "../../../hooks/sales-channel/list-sales-channel/useTable";
 import { CustomListPage } from "../../../layouts/custom-list-page/CustomListPage";
 
@@ -26,6 +28,10 @@ export const ListSalesChannelSection = () => {
       title="Sales Channel"
       headerCard={
         <div className="flex-column">
+          <Row gutter={[0, 16]} style={{ display: "flex", justifyContent: "space-between" }}>
+            <div></div>
+            <CustomButton type="primary" title="Import" icon={<SvgIcon.IconImportFile />} />
+          </Row>
           <Col span={24}>
             <Row style={{ display: "flex", width: "100%", alignItems: "center" }}>
               <Col span={18}>
@@ -49,7 +55,7 @@ export const ListSalesChannelSection = () => {
       contentCard={
         <>
           <Table columns={columns} dataSource={data} pagination={false} rowSelection={rowSelection} size="large" />
-          <CustomPagination total={13} />
+          <CustomPagination total={data?.length} />
         </>
       }
     />
