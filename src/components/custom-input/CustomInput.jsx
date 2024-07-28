@@ -1,9 +1,15 @@
 import { Input } from "antd";
 
-export const CustomInput = ({ placeholder }) => {
+export const CustomInput = ({ placeholder, height = 40, isPassword = false, ...rest }) => {
   const styleInput = {
-    height: "40px",
+    height: `${height}px`,
     borderRadius: "10px",
   };
-  return <Input className="custom-input" placeholder={placeholder} allowClear style={styleInput} />;
+  if (isPassword) {
+    return (
+      <Input.Password className="custom-input" placeholder={placeholder} allowClear style={styleInput} {...rest} />
+    );
+  } else {
+    return <Input className="custom-input" placeholder={placeholder} allowClear style={styleInput} {...rest} />;
+  }
 };

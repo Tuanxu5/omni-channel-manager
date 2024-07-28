@@ -1,5 +1,5 @@
 import { ListDescriptionSection } from "../sections/descriptions/list-description/ListDescriptionSection";
 
-export const DescriptionsPages = () => {
+export const DescriptionsPage = () => {
   return <ListDescriptionSection />;
 };

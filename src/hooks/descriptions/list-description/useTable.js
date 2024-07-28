@@ -1,4 +1,4 @@
-import { Space, Typography } from "antd";
+import { Avatar, Space, Typography } from "antd";
 import { SvgIcon } from "../../../assets/icons";
 
 export const useTable = () => {
@@ -6,8 +6,9 @@ export const useTable = () => {
     {
       key: "1",
       id: "1",
-      name: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh",
-      subcategories_count: 3,
+      thumb: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+      title: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh",
+      salesChanel: "Doraemon.com",
     },
   ];
 
@@ -21,19 +22,26 @@ export const useTable = () => {
       },
     },
     {
-      title: <Typography.Text>Name</Typography.Text>,
-      key: "name",
-      align: "left",
+      title: <Typography.Text>Thumb</Typography.Text>,
+      key: "thumb",
+      align: "center",
       render: (_, record) => {
-        return <Typography.Text>{record?.name}</Typography.Text>;
+        return <Avatar src={record?.thumb} />;
       },
     },
     {
-      title: <Typography.Text>Subcategories count</Typography.Text>,
-      key: "subcategories_count",
+      title: <Typography.Text>Title</Typography.Text>,
+      key: "thumb",
+      render: (_, record) => {
+        return <Typography.Text>{record?.title}</Typography.Text>;
+      },
+    },
+    {
+      title: <Typography.Text>Sales Channel</Typography.Text>,
+      key: "salesChanel",
       align: "center",
       render: (_, record) => {
-        return <Typography.Text>{record?.subcategories_count}</Typography.Text>;
+        return <Typography.Text>{record?.salesChanel}</Typography.Text>;
       },
     },
     {
