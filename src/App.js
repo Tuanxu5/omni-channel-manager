@@ -4,12 +4,13 @@ import { useState } from "react";
 import { BrowserRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 import "./App.scss";
 import { NavBar } from "./layouts/navbar/navbar";
-import { CategoriesPages } from "./pages/Categories/CategoriesPage";
-import { CategoryDetailPage } from "./pages/Categories/CategoryDetail";
 import { DescriptionsPage } from "./pages/DescriptionsPage";
 import ErrorPage from "./pages/ErrorPage";
 import { LoginPage } from "./pages/LoginPage";
 import { ProductsPages } from "./pages/ProductsPage";
+import { CategoriesPages } from "./pages/categories/CategoriesPage";
+import { CategoryDetailPage } from "./pages/categories/CategoryDetail";
+import { ListSalesChannelPage } from "./pages/sales-channel/ListSalesChannel";
 
 const { Content, Sider } = Layout;
 
@@ -27,6 +28,7 @@ const items = [
     getItem(<Link to="/">Products</Link>, "2", <MinusOutlined />),
     getItem(<Link to="/descriptions">Descriptions</Link>, "3", <MinusOutlined />),
     getItem(<Link to="/categories">Categories</Link>, "4", <MinusOutlined />),
+    getItem(<Link to="/sales-channel">Sales Channel</Link>, "5", <MinusOutlined />),
   ]),
 ];
 
@@ -43,8 +45,10 @@ const MainLayout = () => {
       return "4";
     } else if (/^\/categories\/[^\/]+$/.test(pathname)) {
       return "4";
+    } else if (pathname === "/sales-channel") {
+      return "5";
     } else {
-      return "2";
+      return "1";
     }
   };
 
@@ -69,6 +73,7 @@ const MainLayout = () => {
             <Route path="/descriptions" element={<DescriptionsPage />} />
             <Route path="/categories" element={<CategoriesPages />} />
             <Route path="/categories/:id" element={<CategoryDetailPage />} />
+            <Route path="/sales-channel" element={<ListSalesChannelPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Content>

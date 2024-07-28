@@ -6,9 +6,9 @@ export const useTable = () => {
     {
       key: "1",
       id: "1",
-      thumb: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
+      logo: "https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg",
       title: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh",
-      salesChannel: "Doraemon.com",
+      type: "woocommerce",
     },
   ];
 
@@ -22,26 +22,26 @@ export const useTable = () => {
       },
     },
     {
-      title: <Typography.Text>Thumb</Typography.Text>,
-      key: "thumb",
+      title: <Typography.Text>Logo</Typography.Text>,
+      key: "logo",
       align: "center",
       render: (_, record) => {
-        return <Avatar src={record?.thumb} />;
+        return <Avatar src={record?.logo} />;
       },
     },
     {
-      title: <Typography.Text>Title</Typography.Text>,
+      title: <Typography.Text>Domain</Typography.Text>,
       key: "thumb",
       render: (_, record) => {
         return <Typography.Text>{record?.title}</Typography.Text>;
       },
     },
     {
-      title: <Typography.Text>Sales Channel</Typography.Text>,
-      key: "salesChannel",
+      title: <Typography.Text>Type</Typography.Text>,
+      key: "type",
       align: "center",
       render: (_, record) => {
-        return <Typography.Text>{record?.salesChannel}</Typography.Text>;
+        return <Typography.Text>{record?.type}</Typography.Text>;
       },
     },
     {
