@@ -1,5 +1,6 @@
 import { Col, Input, Row, Table, Tag } from "antd";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { SvgIcon } from "../../../assets/icons";
 import { CustomButton } from "../../../components/custom-button/CustomButton";
 import { CustomDatePicker } from "../../../components/custom-date-picker/CustomDatePicker";
@@ -74,7 +75,9 @@ export const ListProductSection = () => {
                   </Col>
                 }
               />
-              <CustomButton type="primary" title="Import" icon={<SvgIcon.IconImportFile />} />
+              <Link to="/products/upload">
+                <CustomButton type="primary" title="Import" icon={<SvgIcon.IconImportFile />} />
+              </Link>
             </div>
             <div style={{ display: "flex", justifyContent: "space-between", gap: "8px" }}>
               <CustomButton title="Edit Selected" type="secondary" />

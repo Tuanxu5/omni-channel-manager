@@ -40,6 +40,8 @@ const MainLayout = () => {
   const getDefaultSelectedKey = pathname => {
     if (pathname === "/") {
       return "2";
+    } else if (/^\/products\/[^\/]+$/.test(pathname)) {
+      return "2";
     } else if (pathname === "/descriptions") {
       return "3";
     } else if (pathname === "/categories") {

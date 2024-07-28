@@ -34,3 +34,15 @@ span {
     border-color: #4361ee !important;
   }
 }
+
+.ant-tree-checkbox-checked {
+  .ant-tree-checkbox-inner {
+    background-color: #4361ee !important;
+    border-color: #4361ee !important;
+  }
+}
+
+.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner:after {
+  background-color: #4361ee !important;
+  border-color: #4361ee !important;
+}
